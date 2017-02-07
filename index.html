@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="app">
 
 <head>
 
@@ -15,6 +15,7 @@
 
 	
     <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +33,7 @@
 </head>
 
 <body>
-
+	
     <!-- Navigation -->
 	<header>
 	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -51,13 +52,13 @@
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
 	                    <li>
-	                        <a href="about.html">About</a>
+	                        <a href="#">About</a>
 	                    </li>
 	                    <li>
-	                        <a href="projects.html">Projects</a>
+	                        <a href="https://marcoadp.github.io" target="blank">Projects</a>
 	                    </li>
 	                    <li>
-	                        <a href="contact.html">Contact</a>
+	                        <a href="#">Contact</a>
 	                    </li>
 	                </ul>
 	            </div>
@@ -71,7 +72,6 @@
     <div class="containter">
     	<div class="col-lg-3"></div>
 		<div class="col-lg-6">
-			
 			<div class="panel panel-default">
 			  <!-- Default panel contents -->
 
@@ -121,7 +121,7 @@
 		</div>
 
 		
-		<div class="panel panel-default">
+		<div class="panel panel-default" ng-controller="oper">
 			  <!-- Default panel contents -->
 
 			  <!-- Table -->
@@ -136,31 +136,31 @@
 		 	</thead>
 		 	<tr>
 		    	<th>Strength</th>
-			    <th>{{ (Determination + Discipline + Motivating) * 2}}</th>
+			    <th>{{ tacticalAndFitness(Fitness, 9, 60, Determination, Discipline, Motivating, 2)}}</th>
 			    <th>Ball Control</th>
-			    <th>{{Defending}}</th>
+			    <th>{{ ballHabilities(Technical, Mental, Determination, Discipline, Motivating)}}</th>
 		 	</tr>
 		 	<tr>
 		    	<th>Aerobic</th>
-			    <th>{{Defending}}</th>
+			    <th>{{tacticalAndFitness(Fitness, 9, 60, Determination, Discipline, Motivating, 2)}}</th>
 			    <th>Defending</th>
-			    <th>{{Defending}}</th>
+			    <th>{{goalkeeperAndDefending(Defending, Tactical, Determination, Discipline, Motivating)}}</th>
 		 	</tr>
 		 	<tr>
 		    	<th>GK - Shot Stopping</th>
-			    <th>{{Defending}}</th>
+			    <th>{{goalkeeperAndDefending(Goalkeppers, Tactical, Determination, Discipline, Motivating)}}</th>
 			    <th>Attacking</th>
-			    <th>{{Defending}}</th>
+			    <th>{{ballHabilities(Attacking, Tactical, Determination, Discipline, Motivating)}}</th>
 		 	</tr>
 		 	<tr>
 		    	<th>GK - Handling</th>
-			    <th>{{Defending}}</th>
+			    <th>{{goalkeeperAndDefending(Goalkeppers, Technical, Determination, Discipline, Motivating)}}</th>
 			    <th>Shooting</th>
-			    <th>{{Defending}}</th>
+			    <th>{{ballHabilities(Technical, Attacking, Determination, Discipline, Motivating)}}</th>
 		 	</tr>
 		 	<tr>
 		    	<th>Tactics</th>
-			    <th>{{((Tactical * 2 + (Determination + Discipline + Motivating))/20 + 0.5) - ((Tactical * 2 + (Determination + Discipline + Motivating))/20 + 0.5) % 0.5}}</th>
+			    <th>{{tacticalAndFitness(Tactical, 2, 20, Determination, Discipline, Motivating, 1)}}</th>
 			    <th></th>
 			    <th></th>
 		 	</tr>					  
