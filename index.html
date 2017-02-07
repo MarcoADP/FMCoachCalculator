@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html ng-app>
-<head>
-    <meta charset="UTF-8">
-    <script src="js/angular.min.js"></script>
+<html lang="en" ng-app>
 
+<head>
+
+    <!--<link rel="import" href="head.html"> -->
+    
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -11,18 +13,27 @@
 
     <title>FM Coach Calculator</title>
 
+	
+    <script src="js/angular.min.js"></script>
 
-	<!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/1-col-portfolio.css" rel="stylesheet">
 
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
 </head>
+
 <body>
-	
-	<!-- Navigation -->
+
+    <!-- Navigation -->
 	<header>
 	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	        <div class="container">
@@ -56,111 +67,126 @@
 	    </nav>
 	  </header>
 
-	<div class="containter">
 
-		
+    <div class="containter">
+    	<div class="col-lg-3"></div>
 		<div class="col-lg-6">
-
-
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Attacking</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Attacking = 10"  ng-model="Attacking"/>
-			</div>
 			
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Defending</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Defending = 10"  ng-model="Defending"/>
-			</div>
+			<div class="panel panel-default">
+			  <!-- Default panel contents -->
 
-			
+			  <!-- Table -->
+	  		<table class="table">
+	    	<tr>
+		    	<th><b>Attacking</b></th>
+			    <th><input type="number" min="0" max="20" ng-init="Attacking = 10"  ng-model="Attacking"/></th>
+			    <th>Determination</th>
+			    <th><input type="number" min="0" max="20" ng-init="Determination = 10"  ng-model="Determination"/></th>
+		 	</tr>
 
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Fitness</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Fitness = 10"  ng-model="Fitness"/>
-			</div>
+		 	<tr>
+			    <th>Defending</th>
+			    <th><input type="number" min="0" max="20" ng-init="Defending = 10"  ng-model="Defending"/></th>
+			    <th><b>Level of Discipline</b></th>
+			    <th><input type="number" min="0" max="20" ng-init="Discipline = 10"  ng-model="Discipline"/></th>
+		 	</tr>
 
-			
-			
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Goalkeppers</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Goalkeppers = 10"  ng-model="Goalkeppers"/>
-			</div>
+		 	<tr>
+			    <th>Fitness</th>
+			    <th><input type="number" min="0" max="20" ng-init="Fitness = 10"  ng-model="Fitness"/></th>
+			    <th><b>Motivating</b></th>
+			    <th><input type="number" min="0" max="20" ng-init="Motivating = 10"  ng-model="Motivating"/></th>
+		 	</tr>
 
-			
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Mental</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Mental = 10"  ng-model="Mental"/>
-			</div>
+		 	<tr>
+			    <th>Goalkeppers</th>
+			    <th><input type="number" min="0" max="20" ng-init="Goalkeppers = 10"  ng-model="Goalkeppers"/></th>
+			    <th></th>
+			    <th></th>
+		 	</tr>
 
+		 	<tr>
+			    <th>Mental</th>
+			    <th><input type="number" min="0" max="20" ng-init="Mental = 10"  ng-model="Mental"/></th>
+			    <th></th>
+			    <th></th>
+		 	</tr>
 
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Tactical</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Tactical = 10"  ng-model="Tactical"/>
-			</div>
+		 	<tr>
+			    <th>Tactical</th>
+			    <th><input type="number" min="0" max="20" ng-init="Tactical = 10"  ng-model="Tactical"/></th>
+			    <th></th>
+			    <th></th>
+		 	</tr>
 
-			
-			<div class="col-lg-3 col-lg-offset-6">
-	    		<output type="text"><b>Technical</b></output>
-			</div>
-			<div class="col-lg-3">
-				<input type="number" min="0" max="20" ng-init="Technical = 10"  ng-model="Technical"/>
-			</div>
-
-
-		</div>
-		<div class="col-lg-6">
-			<div class="col-lg-3">
-	    		<output type="text"><b>Determination</b></output>
-			</div>
-			<div class="col-lg-9">
-				<input type="number" min="0" max="20" ng-init="Determination = 10"  ng-model="Determination"/>
-			</div>
-			<br>
-			<br>
-			
-			<div class="col-lg-3">
-	    		<output type="text"><b>Level of Discipline</b></output>
-			</div>
-			<div class="col-lg-9">
-				<input type="number" min="0" max="20" ng-init="Discipline = 10"  ng-model="Discipline"/>
-			</div>
-
-
-			<div class="col-lg-3">
-	    		<output type="text"><b>Motivating</b></output>
-			</div>
-			<div class="col-lg-6">
-				<input type="number" min="0" max="20" ng-init="Motivating = 10"  ng-model="Motivating"/>
-			</div>
+		 	<tr>
+			    <th>Technical</th>
+			    <th><input type="number" min="0" max="20" ng-init="Technical = 10"  ng-model="Technical"/></th>
+			    <th></th>
+			    <th></th>
+		 	</tr>						  
+		  	</table>
 		</div>
 
-		<br>
+
 		
-		<h1>{{ Attacking}}</h1>
+		<div class="panel panel-default">
+			  <!-- Default panel contents -->
+
+			  <!-- Table -->
+	  		<table class="table">
+	    	<tr>
+		    	<th>Training Category</th>
+			    <th>Stars</th>
+			    <th>Training Category</th>
+			    <th>Stars</th>
+		 	</tr>
+		 	<tr>
+		    	<th>Strength</th>
+			    <th>{{ (Determination + Discipline + Motivating) * 2}}</th>
+			    <th>Ball Control</th>
+			    <th>{{Defending}}</th>
+		 	</tr>
+		 	<tr>
+		    	<th>Aerobic</th>
+			    <th>{{Defending}}</th>
+			    <th>Defending</th>
+			    <th>{{Defending}}</th>
+		 	</tr>
+		 	<tr>
+		    	<th>GK - Shot Stopping</th>
+			    <th>{{Defending}}</th>
+			    <th>Attacking</th>
+			    <th>{{Defending}}</th>
+		 	</tr>
+		 	<tr>
+		    	<th>GK - Handling</th>
+			    <th>{{Defending}}</th>
+			    <th>Shooting</th>
+			    <th>{{Defending}}</th>
+		 	</tr>
+		 	<tr>
+		    	<th>Tactics</th>
+			    <th>{{((Tactical * 2 + (Determination + Discipline + Motivating))/20 + 0.5) - ((Tactical * 2 + (Determination + Discipline + Motivating))/20 + 0.5) % 0.5}}</th>
+			    <th></th>
+			    <th></th>
+		 	</tr>					  
+		  	</table>
+		</div>
 
 	</div>
 
 
-	<!-- Footer -->
-	<footer>
-        <div class="col-lg-12">
-            <p>Copyright &copy; Your Website 2014</p>
-	        
-	    </div>
-	    <!-- /.row -->
-	</footer>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+        
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
