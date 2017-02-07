@@ -77,57 +77,48 @@
 
 			  <!-- Table -->
 	  		<table class="table">
+	  		<thead>
+	    	<tr>
+		    	<th colspan="4"><center>FM Coach Calculator</center></th>
+		 	</tr>
+
 	    	<tr>
 		    	<th><b>Attacking</b></th>
-			    <th><input type="number" min="0" max="20" ng-init="Attacking = 10"  ng-model="Attacking"/></th>
-			    <th>Determination</th>
-			    <th><input type="number" min="0" max="20" ng-init="Determination = 10"  ng-model="Determination"/></th>
+			    <th><input type="number" min="1" max="20" ng-init="Attacking = 10"  ng-model="Attacking"/></th>
+			    <th>Tactical</th>
+			    <th><input type="number" min="1" max="20" ng-init="Tactical = 10"  ng-model="Tactical"/></th>
 		 	</tr>
 
 		 	<tr>
 			    <th>Defending</th>
-			    <th><input type="number" min="0" max="20" ng-init="Defending = 10"  ng-model="Defending"/></th>
-			    <th><b>Level of Discipline</b></th>
-			    <th><input type="number" min="0" max="20" ng-init="Discipline = 10"  ng-model="Discipline"/></th>
+			    <th><input type="number" min="1" max="20" ng-init="Defending = 10"  ng-model="Defending"/></th>
+			    <th>Technical</th>
+			    <th><input type="number" min="1" max="20" ng-init="Technical = 10"  ng-model="Technical"/></th>
 		 	</tr>
 
 		 	<tr>
 			    <th>Fitness</th>
-			    <th><input type="number" min="0" max="20" ng-init="Fitness = 10"  ng-model="Fitness"/></th>
-			    <th><b>Motivating</b></th>
-			    <th><input type="number" min="0" max="20" ng-init="Motivating = 10"  ng-model="Motivating"/></th>
+			    <th><input type="number" min="1" max="20" ng-init="Fitness = 10"  ng-model="Fitness"/></th>
+			    <th>Determination</th>
+			    <th><input type="number" min="1" max="20" ng-init="Determination = 10"  ng-model="Determination"/></th>
 		 	</tr>
 
 		 	<tr>
 			    <th>Goalkeppers</th>
-			    <th><input type="number" min="0" max="20" ng-init="Goalkeppers = 10"  ng-model="Goalkeppers"/></th>
-			    <th></th>
-			    <th></th>
+			    <th><input type="number" min="1" max="20" ng-init="Goalkeppers = 10"  ng-model="Goalkeppers"/></th>
+			    <th><b>Level of Discipline</b></th>
+			    <th><input type="number" min="1" max="20" ng-init="Discipline = 10"  ng-model="Discipline"/></th>
 		 	</tr>
 
 		 	<tr>
 			    <th>Mental</th>
-			    <th><input type="number" min="0" max="20" ng-init="Mental = 10"  ng-model="Mental"/></th>
-			    <th></th>
-			    <th></th>
+			    <th><input type="number" min="1" max="20" ng-init="Mental = 10"  ng-model="Mental"/></th>
+			    <th><b>Motivating</b></th>
+			    <th><input type="number" min="1" max="20" ng-init="Motivating = 10"  ng-model="Motivating"/></th>
 		 	</tr>
-
-		 	<tr>
-			    <th>Tactical</th>
-			    <th><input type="number" min="0" max="20" ng-init="Tactical = 10"  ng-model="Tactical"/></th>
-			    <th></th>
-			    <th></th>
-		 	</tr>
-
-		 	<tr>
-			    <th>Technical</th>
-			    <th><input type="number" min="0" max="20" ng-init="Technical = 10"  ng-model="Technical"/></th>
-			    <th></th>
-			    <th></th>
-		 	</tr>						  
+					  
 		  	</table>
 		</div>
-
 
 		
 		<div class="panel panel-default">
@@ -135,12 +126,14 @@
 
 			  <!-- Table -->
 	  		<table class="table">
+	    	<thead>
 	    	<tr>
 		    	<th>Training Category</th>
 			    <th>Stars</th>
 			    <th>Training Category</th>
 			    <th>Stars</th>
 		 	</tr>
+		 	</thead>
 		 	<tr>
 		    	<th>Strength</th>
 			    <th>{{ (Determination + Discipline + Motivating) * 2}}</th>
